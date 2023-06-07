@@ -1,12 +1,9 @@
-import './App.css';
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
-    <>
-    <h1>Bem-Vinda!</h1>
-    <h2>teste commit</h2>
-    </>
-  );
+    <Home/> 
+  )
 }
 
 export default App;
