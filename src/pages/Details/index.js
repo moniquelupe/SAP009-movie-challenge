@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react"
-import { Link, useParams } from "react-router-dom"
-import { APIKey } from "../../config/key"
-import { Container } from "./styles"
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { Container } from "./styles";
+import GetDetails from "../../API/Details";
 
 function Details() {
 
@@ -11,20 +11,8 @@ function Details() {
   const image_path = 'https://image.tmdb.org/t/p/w500'
   
   useEffect(() => {
-      fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${APIKey}&language=us-US&page=1`)
-        .then(response => response.json())
-        .then(data => {
-          
-          const { title, poster_path, overview, release_date } = data
-          const movie = {
-            id,
-            title,
-            overview: overview,
-            image: `${image_path}${poster_path}`,
-            releaseDate: release_date,
-          }
-          setMovie(movie)
-        })
+      GetDetails(id, image_path)
+      .then((movie) => setMovie(movie))
   }, [id])
 
   return (
