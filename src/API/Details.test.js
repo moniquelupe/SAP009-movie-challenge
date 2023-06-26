@@ -33,21 +33,3 @@ describe("GetDetails", () => {
     });
   });
 });
-
-
-
-/* import GetDetails from "./Details";
-
-// mockar o fetch
-// global.fetch = jest.fn()
-
-describe('GetDetails', () => {
-  it('GetDetails is a function', () => {
-    expect(typeof GetDetails).toBe('function')
-  });
-  it('GetDetails returns movies details', () => {
-    expect(fetch).toHaveBeenCalledWith()
-    expect(movie).toBe()
-  });
-});
-*/

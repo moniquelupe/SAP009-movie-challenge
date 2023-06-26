@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Container } from "./styles";
+import { Container } from "./Details.styles";
 import GetDetails from "../../API/Details";
 
 function Details() {

@@ -30,13 +30,13 @@ test('renders top rated movies correctly', async () => {
     }),
   });
 
-  // Wait for movies to be fetched and rendered
+  //// Testa se os filmes foram consumidos da api e renderizados
   await waitFor(() => {
     expect(screen.getByText(/Spider-Man: Across the Spider-Vers/i)).toBeInTheDocument();
     expect(screen.getByText(/Nuovo Cinema Paradiso/i)).toBeInTheDocument();
   });
 
-  // Check if movie posters are displayed correctly
+  // Checa se os posters dos filmes estão sendo mostrados corretamente 
   expect(screen.getByAltText(/Spider-Man: Across the Spider-Vers/i)).toHaveAttribute(
     'src',
     'https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg'
@@ -46,6 +46,6 @@ test('renders top rated movies correctly', async () => {
     'https://image.tmdb.org/t/p/w500/Q1t8Fg8xnRPMrPhm43IzZFX2lv.jpg'
   );
 
-  // Restore the original fetch implementation
+  // Restaura a implementação original do fetch
   global.fetch.mockRestore();
 });

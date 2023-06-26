@@ -10,7 +10,7 @@ test('renders popular movies correctly', async () => {
     </Router>
   );
 
-  // Mock API response
+  // Criando Mock da API
   const mockMovies = [
     {
       id: 1,
@@ -30,13 +30,13 @@ test('renders popular movies correctly', async () => {
     }),
   });
 
-  // Wait for movies to be fetched and rendered
+  // Testa se os filmes foram consumidos da api e renderizados
   await waitFor(() => {
     expect(screen.getByText('John Wick: Chapter 4')).toBeInTheDocument();
     expect(screen.getByText('The Super Mario Bros. Movie')).toBeInTheDocument();
   });
 
-  // Check if movie posters are displayed correctly
+  // Checa se os posters dos filmes estão sendo mostrados corretamente 
   expect(screen.getByAltText('John Wick: Chapter 4')).toHaveAttribute(
     'src',
     'https://image.tmdb.org/t/p/w500/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg'
@@ -46,6 +46,6 @@ test('renders popular movies correctly', async () => {
     'https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg'
   );
 
-  // Restore the original fetch implementation
+  // Restaura a implementação original do fetch
   global.fetch.mockRestore();
 });
