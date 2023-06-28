@@ -10,12 +10,14 @@ export const Container = styled.div`
 
   movie {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
   }
 
   img {
     width: 300px;
+    max-width: 300px;
     border-radius: 1rem;
   }
 
@@ -23,8 +25,9 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 4rem;
-    max-width: 50%;
+    margin-top: 2rem;
+    text-align: center;
+    max-width: 100%;
   }
 
   button {
@@ -51,5 +54,19 @@ export const Container = styled.div`
 
   release-date {
     opacity: 0.5;
+  }
+
+  @media (min-width: 768px) {
+    .movie {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    .details {
+      align-items: flex-start;
+      margin-left: 4rem;
+      text-align: left;
+      max-width: 50%;
+    }
   }
 `

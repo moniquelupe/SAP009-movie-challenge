@@ -3,10 +3,12 @@ import logo from "./assets/logo.png";
 
 function App() {
   return (
-    <div>
-      <img className={"logo"} src={logo} alt={"logo"}/>
+    <main>
+      <header>
+        <img className={"logo"} src={logo} alt={"logo"}/>
+      </header>
       <Home/> 
-    </div>
+    </main>
     
   )
 }

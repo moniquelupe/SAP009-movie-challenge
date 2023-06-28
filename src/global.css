@@ -11,3 +11,8 @@ body {
   padding: 2rem;
 }
 
+.logo {
+  max-width: 100%;
+  width: 380px;
+}
+

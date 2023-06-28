@@ -19,7 +19,8 @@ export const Movie = styled.li`
     align-items: flex-start;
 
   img {
-    width: 180px;
+    width: 100%;
+    max-width: 180px;
     border-radius: 1rem;
     margin-bottom: 2rem;
   }
@@ -36,5 +37,13 @@ export const Movie = styled.li`
 
   a:hover {
     transform: scale(1.1);
+  }
+
+  @media (min-width: 768px) {
+    max-width: 200px;
+
+    img {
+      max-width: 100%;
+    }
   }
 `

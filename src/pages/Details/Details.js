@@ -16,7 +16,7 @@ function Details() {
   }, [id])
 
   return (
-    <Container>
+    <Container data-testid="container">
       <div className="movie">
         <img src={movie.image} alt={movie.sinopse}/>
         <div className="details">

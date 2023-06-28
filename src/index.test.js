@@ -1,4 +1,4 @@
-/* import { render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
@@ -11,6 +11,4 @@ test('renders routes correctly', () => {
 
   expect(screen.getByText('Popular Movies')).toBeInTheDocument();
   expect(screen.getByText('Top Rated Movies')).toBeInTheDocument();
-  expect(screen.getByText('Overview')).toBeInTheDocument();
 });
-*/

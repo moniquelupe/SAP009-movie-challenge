@@ -9,9 +9,13 @@ export const Container = styled.div`
 export const MovieList = styled.ul`
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
     column-gap: 3rem;
     row-gap: 4rem;
+
+    @media (min-width: 1500px) {
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    }
 `
 export const Movie = styled.li`
     display: flex;
@@ -19,7 +23,8 @@ export const Movie = styled.li`
     align-items: flex-start;
 
   img {
-    width: 180px;
+    width: 100%;
+    max-width: 100%;
     border-radius: 1rem;
     margin-bottom: 2rem;
   }
