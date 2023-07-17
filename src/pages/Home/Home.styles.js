@@ -5,6 +5,12 @@ export const Container = styled.div`
     text-align: left;
     margin: 2rem 0;
   }
+
+  h2 {
+    text-align: left;
+    margin: 2rem 0;
+    font-size: 33px;
+  }
 `
 export const MovieList = styled.ul`
     list-style: none;

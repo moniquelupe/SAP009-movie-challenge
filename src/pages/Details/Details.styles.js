@@ -19,6 +19,7 @@ export const Container = styled.div`
     width: 300px;
     max-width: 300px;
     border-radius: 1rem;
+    margin-left: 3rem;
   }
 
   details {
@@ -31,6 +32,8 @@ export const Container = styled.div`
   }
 
   button {
+    display: flex;
+    flex-direction: column;
     background: #4DBFFF;
     border: none;
     cursor: pointer;
@@ -42,6 +45,10 @@ export const Container = styled.div`
     transition: a11 0.3s;
   }
 
+  button a {
+    text-decoration: none;
+  }
+
   button:hover {
     background: #096599;
   }
@@ -49,11 +56,7 @@ export const Container = styled.div`
   span {
     line-height: 130%;
     margin-bottom: 1rem;
-    font-size: 110%;
-  }
-
-  release-date {
-    opacity: 0.5;
+    font-size: 17px;
   }
 
   @media (min-width: 768px) {
