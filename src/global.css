@@ -13,6 +13,18 @@ body {
 
 .logo {
   max-width: 100%;
-  width: 380px;
+  width: 200px;
+}
+
+@media (min-width: 1440px) {
+  .logo {
+    width: 300px;
+  }
+} 
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 

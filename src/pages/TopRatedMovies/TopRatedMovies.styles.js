@@ -1,30 +1,42 @@
 import styled from 'styled-components';
 
 export const MovieList = styled.ul`
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  column-gap: 3rem;
-  row-gap: 4rem;
-`;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    row-gap: 4rem;
 
+    @media (min-width: 768px) {
+    grid-template-columns: repeat( 4, 1fr );
+    }
+
+    @media (min-width: 1200px) {
+    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+    
+    }
+`
 export const Movie = styled.li`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
   img {
-    width: 100%; 
-    max-width: 180px;
+    width: 100%;
+    max-width: 100%;
     border-radius: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   span {
     font-weight: bold;
-    font-size: 120%;
+    font-size: 16px;
     text-align: center;
+
+    @media (min-width: 1200px) {
+      font-size: 25px;
   }
+} 
 
   a {
     transition: all 0.3s;
@@ -32,13 +44,5 @@ export const Movie = styled.li`
 
   a:hover {
     transform: scale(1.1);
-  }
-
-  @media (min-width: 768px) {
-    max-width: 200px;
-
-    img {
-      max-width: 100%;
-    }
   }
 `;

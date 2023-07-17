@@ -5,6 +5,8 @@ import App from './App';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Details from './pages/Details/Details'
 
+// Configuração das rotas
+// Renderiza o componente App e o componente Details
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>

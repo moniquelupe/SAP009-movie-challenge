@@ -9,12 +9,17 @@ export const Container = styled.div`
 export const MovieList = styled.ul`
     list-style: none;
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+    grid-template-columns: 1fr 1fr;
     column-gap: 3rem;
     row-gap: 4rem;
 
-    @media (min-width: 1500px) {
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    @media (min-width: 768px) {
+    grid-template-columns: repeat( 4, 1fr );
+    }
+
+    @media (min-width: 1200px) {
+    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+    
     }
 `
 export const Movie = styled.li`
@@ -26,14 +31,18 @@ export const Movie = styled.li`
     width: 100%;
     max-width: 100%;
     border-radius: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   span {
     font-weight: bold;
-    font-size: 120%;
+    font-size: 16px;
     text-align: center;
+
+    @media (min-width: 1200px) {
+      font-size: 25px;
   }
+} 
 
   a {
     transition: all 0.3s;

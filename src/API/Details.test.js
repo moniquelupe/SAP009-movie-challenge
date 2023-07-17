@@ -30,6 +30,6 @@ describe("GetDetails", () => {
       overview: "Movie overview",
       image: "https://example.com/images/path/to/poster.jpg",
       releaseDate: "2023-06-15",
-    });
+    });''
   });
 });
